@@ -8,7 +8,7 @@
 			<h3>Thanks for getting in touch.</h3>
 			{{else}}
 			<form method="post">
-				<input type="hidden" name="action" value="contact">
+				<input type="hidden" name="action" value="messages">
 				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 					<label>Name</label>
 					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">

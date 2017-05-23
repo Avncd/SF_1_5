@@ -11,13 +11,13 @@ exports = module.exports = function (req, res) {
 	locals.messagesTypes = Messages.fields.messagesType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
-	locals.enquirySubmitted = false;
+	locals.messagesSubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'messages' }, function (next) {
 
-		var newMessages = new Messages .model();
-		var updater = newMessages.getUpdateHandler(req);
+		var newMessages = new Messages.model();
+		var updater = new Messages.getUpdateHandler(req);
 
 		updater.process(req.body, {
 			flashErrors: true,
@@ -27,7 +27,7 @@ exports = module.exports = function (req, res) {
 			if (err) {
 				locals.validationErrors = err.errors;
 			} else {
-				locals.enquirySubmitted = true;
+				locals.messagesSubmitted = true;
 			}
 			next();
 		});

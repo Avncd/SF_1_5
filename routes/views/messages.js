@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Messages = keystone.list('messages');
+var messages = keystone.list('messages');
 
 exports = module.exports = function (req, res) {
 
@@ -16,8 +16,8 @@ exports = module.exports = function (req, res) {
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'messages' }, function (next) {
 
-		var newMessages = new Messages.model();
-		var updater = new Messages.getUpdateHandler(req);
+		var newMessages = new Messages .model();
+		var updater = newMessages.getUpdateHandler(req);
 
 		updater.process(req.body, {
 			flashErrors: true,

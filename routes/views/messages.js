@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var messages = keystone.list('messages');
+var Enquiry = keystone.list('Messages');
 
 exports = module.exports = function (req, res) {
 
@@ -11,7 +11,7 @@ exports = module.exports = function (req, res) {
 	locals.messagesTypes = Messages.fields.messagesType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
-	locals.messagesSubmitted = false;
+	locals.enquirySubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'messages' }, function (next) {

@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Messages = keystone.list('message');
+var Messages = keystone.list('messages');
 
 exports = module.exports = function (req, res) {
 
@@ -7,14 +7,14 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'message';
+	locals.section = 'messages';
 	locals.enquiryTypes = Messages.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
-	view.on('post', { action: 'message' }, function (next) {
+	view.on('post', { action: 'messages' }, function (next) {
 
 		var newMessages = new Messages .model();
 		var updater = newMessages.getUpdateHandler(req);
@@ -33,5 +33,5 @@ exports = module.exports = function (req, res) {
 		});
 	});
 
-	view.render('message');
+	view.render('messages');
 };

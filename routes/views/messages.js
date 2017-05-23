@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'messages';
-	locals.messagesTypes = Messages.fields.enquiryType.ops;
+	locals.messagesTypes = Messages.fields.messagesType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;

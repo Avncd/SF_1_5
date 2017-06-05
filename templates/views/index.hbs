@@ -298,6 +298,21 @@ Find a role that fits your purpose and schedule.</h2>
 			</div>
       <h2 class="heading-2 programs">Recent News &amp; Videos</h2>
       <div class="news-container">
+
+				<div class="blog">
+					{{# each data.posts.results}}
+					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+						<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+						<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+								{{#if author.name.first}}by {{author.name.first}}{{/if}}
+						</p>
+						{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
+						<p>{{{content.brief}}}</p>
+						{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
+					</div>
+					{{/each}}
+				</div>
+				
         <a class="news-linkblock w-inline-block" href="#">
           <div class="news-top-1">Residential Group Care</div>
           <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>

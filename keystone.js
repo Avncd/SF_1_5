@@ -12,10 +12,6 @@ var bodyParser = require('body-parser');
 
 var keystone = express();
 
-keystone.listen(5000, function(){
-	console.log("Stripe is running");
-});
-
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -76,3 +72,8 @@ keystone.set('nav', {
 
 
 keystone.start();
+
+
+keystone.listen(5000, function(){
+	console.log("Stripe is running");
+});

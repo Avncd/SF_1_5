@@ -1,21 +1,353 @@
 {{!< default}}
-<div class="container">
-	<div class="jumbotron"><img src="/images/logo.svg" width="160">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>hunter@hthompson.me</strong> and the password <strong>password</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
-	</div>
-</div>
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Mon Jun 05 2017 19:57:12 GMT+0000 (UTC)  -->
+<html data-wf-page="5924db699cd9a10ccaf18378" data-wf-site="5924db699cd9a10ccaf18377">
+<head>
+  <meta charset="utf-8">
+  <title>SF_v1.0</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/sf-v1-0.webflow.css" rel="stylesheet" type="text/css">
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7972334/7917972/css/fonts.css">
+  <style>
+    .p .h2 .h3 .heading-2 .heading-3 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    .heading-1 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 400;
+    }
+    h1 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 400;
+    }
+    h4 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 500;
+    }
+    h2 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    h3 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    body {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    h6, .heading-5 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7972334/7917972/css/fonts.css">
+  <style>
+    .p .h2 .h3 .heading-2 .heading-3 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    .heading-1 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 400;
+    }
+    h1 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 400;
+    }
+    h4 {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 500;
+    }
+    h2 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    h3 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    body {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    h6, .heading-5 {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+    .get-involved-text {
+    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
+    font-style: normal;
+    font-weight: 300;
+    }
+  </style>
+</head>
+<body class="body" data-ix="display-nav">
+  <div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-ix="display-none">
+    <div class="container w-container">
+      <a class="brand w-nav-brand" href="#"><img class="image-2" src="images/sf-logo.svg">
+      </a>
+      <nav class="nav-menu w-nav-menu" role="navigation">
+        <div class="dropdown w-dropdown" data-delay="0">
+          <div class="dropdown-toggle-2 w-dropdown-toggle">
+            <div class="white-nav-text">About Us</div>
+          </div>
+          <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Contact Us</a><a class="w-dropdown-link" href="#">Recent News</a>
+          </nav>
+        </div>
+        <div class="dropdown-2 w-dropdown" data-delay="0">
+          <div class="dropdown-toggle w-dropdown-toggle">
+            <div class="white-nav-text">Programs &amp; Services</div>
+          </div>
+          <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Residential Group Care</a><a class="w-dropdown-link" href="#">After School Mentorship</a>
+          </nav>
+        </div><a class="charters w-nav-link white-nav-text" href="#">Get Involved</a><a class="charters w-nav-link white-nav-text" href="#">Charters</a><a class="nav-donation-button w-nav-link" href="#">Donate</a>
+      </nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section" data-ix="show-nav">
+    <div class="container main-header">
+      <h1 class="heading white">RESIDENTIAL GROUP CARE</h1>
+    </div>
+  </div>
+  <div class="newsletter-section" data-ix="display-nav">
+    <div class="donation-form w-form">
+      <form class="form" data-name="Email Form" id="email-form" method="post" name="email-form">
+        <input class="email-name w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Full Name" type="text">
+        <input class="text-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Your Email Address" required="required" type="email">
+        <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Keep in Touch!">
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form</div>
+      </div>
+    </div>
+  </div>
+  <div class="main-info-section">
+    <div class="container left">
+      <h2 class="heading-2 white">SailFuture pioneers innovative solutions to empower and inspire youth in the child welfare and juvenile justice systems.</h2>
+      <h3 class="blue heading-3">Our goal is to fundamentally change the life trajectory of every youth we serve. To do that, we empower youth to change their behavior, self-concept, and overcome deeply-seeded trauma.</h3>
+      <a class="about-us learn-more-button w-clearfix w-inline-block" href="#">
+        <div class="text-block yellow">Learn more about us</div><img class="image" src="images/arrow-white.svg" width="19.5">
+      </a>
+    </div>
+  </div>
+  <div class="our-programs">
+    <div class="container programs-1">
+      <h2 class="dark heading-2 programs">SailFuture operates two programs: a comprehensive intervention and group home facility for crossover youth, and an afterschool mentoring program for at-risk high school students.</h2>
+      <div class="container-programs w-clearfix">
+        <div class="div-block">
+          <h4 class="heading-4">RESIDENTIAL GROUP CARE</h4>
+          <h3 class="heading-3">Our goal is to fundamentally change the life trajectory of every youth we serve. To do that, we empower youth to change their behavior, self-concept, and overcome deeply-seeded trauma.</h3>
+          <a class="learn-more-button w-clearfix w-inline-block" href="#">
+            <div class="text-block">Read about the program model</div><img class="image" src="images/arrow-blue.svg">
+          </a>
+        </div>
+        <div class="our-programs-rgc"></div>
+      </div>
+      <div class="asm container-programs">
+        <div class="asm div-block">
+          <h4 class="heading-4">AFTER SCHOOL MENTORSHIP</h4>
+          <h3 class="heading-3">Semester-long intervention program for students who are at-risk of expulsion or dropping out of high school.</h3>
+          <a class="learn-more-button w-clearfix w-inline-block" href="#">
+            <div class="text-block">Contact Us</div><img class="image" src="images/arrow-blue.svg">
+          </a>
+        </div>
+        <div class="asm our-programs-rgc"></div>
+      </div>
+    </div>
+  </div>
+  <div class="live-tracker">
+    <div class="container live-tracker-1">
+      <div class="live-tracker-block">
+        <h4 class="heading-4 white">Live Tracker</h4>
+        <h3 class="heading-3 white">Follow the boat’s location and view daily photos and captain logs from our youth’s sailing journey around the state of Florida on board SV Defy the Odds.</h3>
+        <a class="about-us learn-more-button w-clearfix w-inline-block" href="#">
+          <div class="blue text-block yellow">Learn more about us</div><img class="image" src="images/arrow-white.svg" width="19.5">
+        </a>
+      </div>
+      <div class="live-tracker-section">
+        <a class="tracker-stories-container w-inline-block" href="#">
+          <div class="main-image-tracker"></div>
+          <div class="tracker-main-text">
+            <h6 class="heading-6">June 9th, 2017<br>Pensacola</h6>
+          </div>
+        </a>
+        <a class="tracker-stories-container w-inline-block" href="#">
+          <div class="main-image-tracker"></div>
+          <div class="tracker-main-text">
+            <h6 class="heading-6">May 25th, 2017<br>Ft. Desoto</h6>
+          </div>
+        </a>
+        <a class="tracker-stories-container w-inline-block" href="#">
+          <div class="main-image-tracker"></div>
+          <div class="tracker-main-text">
+            <h6 class="heading-6">April 20th, 2017<br>St. Petersburg</h6>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="get-involved">
+    <div class="container">
+      <h2 class="center dark heading-2 programs">Inspired to get involved? <br>
+Find a role that fits your purpose and schedule.</h2>
+      <div class="div-block-2">
+        <div class="get-involved-container no-space">
+          <div class="get-involved-top-image"></div>
+          <div class="get-involved-bottom-half">
+            <h5 class="get-involved-text heading-6">Join us for a Sunday dinner, become an academic tutor, or sign up as a mentor.</h5><a class="button-2 w-button" href="#">Sign-up &amp; <br>help volunteer</a>
+          </div>
+        </div>
+        <div class="get-involved-container no-space">
+          <div class="get-involved-top-image"></div>
+          <div class="get-involved-bottom-half">
+            <h5 class="get-involved-text heading-6">Donate your boat or property to become a floating classroom or stable home for our kids.</h5><a class="button-2 w-button" href="#">Make a boat or property donation</a>
+          </div>
+        </div>
+        <div class="get-involved-container no-space">
+          <div class="get-involved-top-image"></div>
+          <div class="get-involved-bottom-half">
+            <h5 class="get-involved-text heading-6">Make a gift to support our kids’ journey to transform their lives.</h5><a class="button-2 w-button" href="#">Give a one-time or monthly donation</a>
+          </div>
+        </div>
+        <div class="get-involved-container no-space">
+          <div class="get-involved-top-image"></div>
+          <div class="get-involved-bottom-half">
+            <h5 class="get-involved-text heading-6">Book a sunset sail, a week-long vacation, or a team building retreat.</h5><a class="button-2 w-button" href="#">Book a charter or <br>sunset sail</a>
+          </div>
+        </div>
+        <div class="get-involved-container no-space">
+          <div class="get-involved-top-image"></div>
+          <div class="get-involved-bottom-half">
+            <h5 class="get-involved-text heading-6">Want to make a more specific donation? Cross an item off our wish list.</h5><a class="button-2 w-button" href="#">Take a look at <br>our wishlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recent-news">
+    <div class="container">
+      <h2 class="heading-2 programs">Recent News &amp; Videos</h2>
+      <div class="news-container">
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+        <a class="news-linkblock w-inline-block" href="#">
+          <div class="news-top-1">Residential Group Care</div>
+          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
+          <div class="publisher-date">
+            <div class="news-bottom-text no-pad">Your Observer</div>
+            <div class="news-bottom-text">Jan 29th, 2017</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sponsors">
+    <div class="container">
+      <div class="sponsor-container">
+        <div class="_1 sponsor"></div>
+        <div class="_2 sponsor"></div>
+        <div class="_3 sponsor"></div>
+        <div class="_4 sponsor"></div>
+        <div class="_5 sponsor"></div>
+        <div class="_6 sponsor"></div>
+        <div class="_7 sponsor"></div>
+        <div class="_8 sponsor"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="div-block-3">
+        <div class="footer-column small"><a class="footer-title" href="#">About Us</a>
+        </div>
+        <div class="footer-column large">
+          <div class="footer-title">Programs &amp; Services</div><a class="link-2" href="#">Residential Group Care</a><a class="link-2" href="#">After School Mentorship</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-title">Take Action</div><a class="link-5" href="#">Donate Your Boat or Property</a><a class="link-5" href="#">Monthly or One-Time Donation</a><a class="link-5" href="#">Become A Volunteer</a><a class="link-5" href="#">Charter Our Boat</a><a class="link-5" href="#">View Our Wishlist</a>
+        </div>
+        <div class="footer-column">
+          <div class="footer-title">Contact</div>
+          <div class="text-block-3">mlong@sailfuture.org</div>
+          <div class="text-block-4">+1 941 219 9847</div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="text-block-5">Copyright 2017 SailFuture, All Rights Reserved</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>

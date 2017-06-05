@@ -5,6 +5,16 @@ require('dotenv').config();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
+var express = require('express');
+var stripe = require('stripe')('pk_live_4ZG5EaTIqxeT17r4Tsoj8u7f');
+var hbs = require('hbs');
+var bodyParser = require('body-parser');
+
+var keystone = express();
+
+keystone.listen(5000, function(){
+	console.log("Stripe is running");
+});
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -66,5 +76,3 @@ keystone.set('nav', {
 
 
 keystone.start();
-
-

@@ -15,49 +15,7 @@
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7972334/7917972/css/fonts.css">
-  <style>
-    .p .h2 .h3 .heading-2 .heading-3 {
-    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
-    font-style: normal;
-    font-weight: 300;
-    }
-    .heading-1 {
-    font-family: "Tungsten A", "Tungsten B";
-    font-style: normal;
-    font-weight: 400;
-    }
-    h1 {
-    font-family: "Tungsten A", "Tungsten B";
-    font-style: normal;
-    font-weight: 400;
-    }
-    h4 {
-    font-family: "Tungsten A", "Tungsten B";
-    font-style: normal;
-    font-weight: 500;
-    }
-    h2 {
-    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
-    font-style: normal;
-    font-weight: 300;
-    }
-    h3 {
-    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
-    font-style: normal;
-    font-weight: 300;
-    }
-    body {
-    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
-    font-style: normal;
-    font-weight: 300;
-    }
-    h6, .heading-5 {
-    font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
-    font-style: normal;
-    font-weight: 300;
-    }
-  </style>
-  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7972334/7917972/css/fonts.css">
+  <script src="http://malsup.github.com/jquery.form.js"></script>
   <style>
     .p .h2 .h3 .heading-2 .heading-3 {
     font-family: "Ideal Sans SSm A", "Ideal Sans SSm B";
@@ -104,8 +62,66 @@
     font-style: normal;
     font-weight: 300;
     }
+
+    .popup {
+      width:50%!important;
+      height:50%%!important;
+      position:relative;
+    }
+
+    .popup-container{
+      display:none;
+      background-color:black!important;
+      position:fixed!important;
+      z-index:99999!important;
+      width:100%!important;
+      height:100%!important;
+      margin:0!important;
+    }
   </style>
 </head>
+
+<div id="popup-container" class="popup-container">
+  <div id="popup" class="popup">
+      <div id="btnFadeOut">Close</div>
+      <!-- {{#if enquirySubmitted}}
+      <h3>Thanks for getting in touch.</h3>
+      {{else}} -->
+      <form method="post">
+        <input type="hidden" name="action" value="contact">
+        <div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+          <label>Name</label>
+          <input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+        </div>
+        <div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" value="{{formData.email}}">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+        </div>
+        <div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+          <label>What are you contacting us about?</label>
+          <select name="enquiryType" class="form-control">
+            <option value="">(select one)</option>
+            {{#each enquiryTypes}}
+            <option value="{{value}}">{{label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+          <label>Message</label>
+          <textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+      <!-- {{/if}} -->
+    </div>
+  </div>
+
 <body class="body" data-ix="display-nav">
   <div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-ix="display-none">
     <div class="container w-container">
@@ -137,21 +153,9 @@
       <h1 class="heading white">RESIDENTIAL GROUP CARE</h1>
     </div>
   </div>
-  <div class="newsletter-section" data-ix="display-nav">
-    <div class="donation-form w-form">
-      <form class="form" data-name="Email Form" id="email-form" method="post" name="email-form">
-        <input class="email-name w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Full Name" type="text">
-        <input class="text-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Your Email Address" required="required" type="email">
-        <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Keep in Touch!">
-      </form>
-      <div class="w-form-done">
-        <div>Thank you! Your submission has been received!</div>
-      </div>
-      <div class="w-form-fail">
-        <div>Oops! Something went wrong while submitting the form</div>
-      </div>
-    </div>
-  </div>
+
+
+
   <div class="main-info-section">
     <div class="container left">
       <h2 class="heading-2 white">SailFuture pioneers innovative solutions to empower and inspire youth in the child welfare and juvenile justice systems.</h2>
@@ -257,113 +261,27 @@ Find a role that fits your purpose and schedule.</h2>
   </div>
   <div class="recent-news">
     <div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-md-6">
-					{{#if enquirySubmitted}}
-					<h3>Thanks for getting in touch.</h3>
-					{{else}}
-					<form method="post">
-						<input type="hidden" name="action" value="contact">
-						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-							<label>Name</label>
-							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-						</div>
-						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-							<label>Email</label>
-							<input type="email" name="email" class="form-control" value="{{formData.email}}">
-						</div>
-						<div class="form-group">
-							<label>Phone</label>
-							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-						</div>
-						<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-							<label>What are you contacting us about?</label>
-							<select name="enquiryType" class="form-control">
-								<option value="">(select one)</option>
-								{{#each enquiryTypes}}
-								<option value="{{value}}">{{label}}</option>
-								{{/each}}
-							</select>
-						</div>
-						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-							<label>Message</label>
-							<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</div>
-					</form>
-					{{/if}}
-				</div>
-			</div>
+      <button id="btnFadeIn">Fade Toggle</button>
+
       <h2 class="heading-2 programs">Recent News &amp; Videos</h2>
       <div class="news-container">
-
-				<div class="blog">
 					{{# each data.posts.results}}
-					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-						<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-						<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+
+
+					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="news-linkblock w-inline-block">
+            <a href="{{postUrl slug}}" class="">{{{title}}}
+						<p class="news-bottom-text">{{{categoryList categories prefix="Posted in "}}}
 								{{#if author.name.first}}by {{author.name.first}}{{/if}}
 						</p>
 						{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-						<p>{{{content.brief}}}</p>
+						<div class="news-main-text">{{{content.brief}}}</div>
 						{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
+            </a>
 					</div>
 					{{/each}}
-				</div>
-				
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
-        <a class="news-linkblock w-inline-block" href="#">
-          <div class="news-top-1">Residential Group Care</div>
-          <div class="news-main-text">Sailfuture Brightens Horizons with Home Renovation</div>
-          <div class="publisher-date">
-            <div class="news-bottom-text no-pad">Your Observer</div>
-            <div class="news-bottom-text">Jan 29th, 2017</div>
-          </div>
-        </a>
+
+        </div>
       </div>
-    </div>
-  </div>
   <div class="sponsors">
     <div class="container">
       <div class="sponsor-container">
@@ -403,5 +321,22 @@ Find a role that fits your purpose and schedule.</h2>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="https://sailforjustice.org/testing/js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+  <script>
+  $(document).ready(function(){
+    $('#btnFadeIn').click(function(){
+      $('#popup-container').fadeIn(200);
+    });
+
+    $('#btnFadeOut').click(function(){
+      $('#popup-container').fadeOut(200);
+    });
+
+    $('#myForm').ajaxForm(function() {
+        alert("Thank you for your comment!");
+    });
+
+  });
+  </script>
 </body>
 </html>

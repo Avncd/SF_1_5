@@ -59,8 +59,8 @@ exports = module.exports = function (req, res) {
 
 		var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
-			perPage: 10,
-			maxPages: 10,
+			perPage: 6,
+			maxPages: 6,
 			filters: {
 				state: 'published',
 			},
